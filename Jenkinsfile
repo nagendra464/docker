@@ -22,7 +22,9 @@ node('docker'){
         sh label: '', script: 'docker push nagendra464/naglogin'
     }
 
-   
-    
+    stage('create container'){
+        sh label: '', script: 'docker run --name testlogin -d -p 80:8080 nagendra464/naglogin'   
+        
+    }
     
 }
