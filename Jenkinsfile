@@ -14,6 +14,13 @@ node('docker'){
 
         sh label: '', script: 'docker build -t nagendra464/naglogin .'
     }
+    stage('Push image') {
+        withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerpwd')]) {
+            sh label: '', script: "docker login -u nagendra464 -p ${dockerpwd}"
+    }
+        
+        sh label: '', script: 'docker push nagendra464/naglogin'
+    }
 
    
     
