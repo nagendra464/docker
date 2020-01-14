@@ -6,6 +6,8 @@ node('docker'){
         git 'https://github.com/nagendra464/docekr.git'
        
     }
+    stage('Build mvn'){
+        sh label: '', script: 'mvn clean install'
 
     stage('Build image') {
         /* This builds the actual image */
