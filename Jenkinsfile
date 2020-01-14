@@ -12,7 +12,7 @@ node('docker'){
     stage('Build image') {
         /* This builds the actual image */
 
-        docker = docker.build("nagendra464/nag")
+        sh label: '', script: 'docker build -t nagendra464/naglogin .'
     }
 
    
