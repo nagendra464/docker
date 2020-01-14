@@ -2,7 +2,7 @@ node('docker'){
     
 
     stage('Clone repository') {
-        /* Cloning the Repository to our Workspace */
+        
         git 'https://github.com/nagendra464/docekr.git'
        
     }
@@ -10,7 +10,7 @@ node('docker'){
         sh label: '', script: 'mvn clean install'
     }
     stage('Build image') {
-        /* This builds the actual image */
+       
 
         sh label: '', script: 'docker build -t nagendra464/naglogin .'
     }
