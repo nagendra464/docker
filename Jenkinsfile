@@ -4,7 +4,7 @@ node('docker'){
     stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
         git 'https://github.com/nagendra464/docekr.git'
-        checkout scm
+       
     }
 
     stage('Build image') {
