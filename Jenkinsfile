@@ -8,7 +8,7 @@ node('docker'){
     }
     stage('Build mvn'){
         sh label: '', script: 'mvn clean install'
-
+    }
     stage('Build image') {
         /* This builds the actual image */
 
