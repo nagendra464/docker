@@ -3,6 +3,7 @@
   hosts: webservers
   become: yes
   tasks:
-  - name: pull ubuntu machine
+  - name: pull an image
     docker_image:
      name: centos
+     source: pull
