@@ -1,0 +1,13 @@
+---
+# tasks file for tomcatrole
+- include_tasks: installjava.yml
+- include_tasks: create_User&Group.yml
+- include_tasks: install_tomcat.yml
+- include_tasks: extract_the_tar_file.yml
+- include_tasks: update_permissions.yml
+- include_tasks: tomcat_config_file.yml
+- include_tasks: reload_daemon.yml
+- include_tasks: tomcat_users.yml
+- include_tasks: web_management.yml
+- include_tasks: tomcat_status_check.yml
+- include_tasks: java_application_deploy.yml

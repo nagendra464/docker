@@ -1,0 +1,8 @@
+---
+- name: checking service status
+  command: systemctl status tomcat
+  register: result
+    
+- name: showing report
+  debug:
+   var: result

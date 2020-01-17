@@ -1,0 +1,6 @@
+---
+# vars file for tomcatrole
+# This will configure a default manager-gui user:
+
+admin_username: nagendra
+admin_password: nagendra464

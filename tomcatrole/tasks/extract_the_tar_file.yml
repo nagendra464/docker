@@ -1,0 +1,11 @@
+---
+- name: create the directory
+  file:
+   path: /opt/tomcat
+   state: directory
+
+- name: extract the tar file
+  command:
+   cmd: sudo tar xzvf /home/ansible/apache-tomcat-8.5.47.tar.gz -C /opt/tomcat --strip-components=1   
+   creates: /opt/tomcat/LICENSE
+- include: file_checking.yml

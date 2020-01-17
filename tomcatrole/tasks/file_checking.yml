@@ -1,0 +1,13 @@
+---
+- name: Ansible check file exists.
+  stat:
+   path: /opt/tomcat/LICENSE
+  register: p
+- name: If file exists
+  debug:
+   msg: "File exists..."
+  when: p.stat.exists
+- name: checking
+  debug:
+   msg: "File not found"
+  when: p.stat.exists == False
