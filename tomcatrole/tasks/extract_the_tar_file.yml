@@ -6,6 +6,6 @@
 
 - name: extract the tar file
   command:
-   cmd: sudo tar xzvf /home/docker/apache-tomcat-8.5.47.tar.gz -C /opt/tomcat --strip-components=1   
+   cmd: sudo tar xzvf /home/docker/apache-tomcat-8.5.50.tar.gz -C /opt/tomcat --strip-components=1   
    creates: /opt/tomcat/LICENSE
 - include: file_checking.yml
