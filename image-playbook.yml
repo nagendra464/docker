@@ -1,0 +1,8 @@
+---
+- name: pull ubuntu machine
+  hosts: webservers
+  become: yes
+  tasks:
+  - name: pull ubuntu machine
+    docker_image:
+     name: ubuntu
