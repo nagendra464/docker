@@ -3,7 +3,7 @@ node('docker'){
 
     stage('Clone repository') {
         
-        git 'https://github.com/nagendra464/docekr.git'
+        git 'https://github.com/nagendra464/docker.git'
        
     }
     stage('Build mvn'){
@@ -12,7 +12,7 @@ node('docker'){
     stage('Build image') {
        
 
-        sh label: '', script: 'docker build -t nagendra464/naglogin .'
+        sh label: '', script: 'docker build -t nagendra464/naglogin:1 .'
     }
     stage('Push image') {
         withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerpwd')]) {
