@@ -1,0 +1,9 @@
+---
+- name: pull ubuntu machine
+  hosts: webservers
+  become: yes
+  tasks:
+  - name: pull an image
+    docker_image:
+     name: centos
+     source: pull

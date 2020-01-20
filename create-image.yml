@@ -1,0 +1,8 @@
+---
+- name: create container
+  become: yes
+  hosts: webservers
+  tasks:
+  - name: create container from image
+    shell: docker run --name mylogin -d -p 88:8080 nagendra464/naglogin:5
+     
