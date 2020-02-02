@@ -1,7 +1,9 @@
 ---
 - name: deploy java application
   get_url:
-    url: https://login464.s3.us-east-2.amazonaws.com/mahaLogin-1.0-SNAPSHOT.war
-    dest: /opt/tomcat/webapps/mahaLogin-1.0-SNAPSHOT.war
+    url: http://18.220.46.254:8081/artifactory/nagendra/11/target/mahaLogin-1.0.war
+    dest: /opt/tomcat/webapps/mahaLogin-10.war
+    username: admin
+    password: jfrogpassword  
     force_basic_auth: yes
   notify: restart tomcat  
