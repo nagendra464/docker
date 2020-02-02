@@ -2,5 +2,5 @@
 - name: Download the tomcat
   get_url:
    url: http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
-   dest: /home/docker/apache-tomcat-8.5.50.tar.gz
+   dest: /home/nag/apache-tomcat-8.5.50.tar.gz
    force_basic_auth: yes
