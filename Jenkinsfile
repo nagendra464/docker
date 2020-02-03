@@ -6,9 +6,7 @@ node('Docker'){
         git 'https://github.com/nagendra464/docker.git'
        
     }
-    stage('Build mvn'){
-        sh label: '', script: 'mvn clean install'
-    }
+    
     stage('Build image') {
        
 
