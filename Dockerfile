@@ -5,6 +5,6 @@ RUN apt-get install maven -y
 RUN apt-get install git -y
 RUN apt-get install default-jdk -y
 RUN ["apt-get", "-y", "install", "vim"]
-ADD https://s3-artifactory-test.s3.us-east-2.amazonaws.com/target/mahaLogin-1.0.war /usr/local/tomcat/webapps/
+ADD https://login464.s3.us-east-2.amazonaws.com/mahaLogin-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
