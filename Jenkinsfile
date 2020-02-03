@@ -1,4 +1,4 @@
-node('docker'){
+node('Docker'){
     
 
     stage('Clone repository') {
