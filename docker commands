@@ -1,0 +1,21 @@
+* docker run --name c1 --privileged --device=/dev/xvdf -d -p 8082:8080 tomcat  --mount to container
+* docker run --name c2 --link c1:mysql -d -p 8080:80 wordpress  --to link two containers
+* docker top container id --- to see top level processes
+* docker stasts containerid ---it  will show the CPU and Memory utilization of the Container.
+* docker attach containerid --This command is used to attach to a running container.
+* docker paused containerid --you need to pause the processes in the container.
+* docker unpaused containerid --which you need to unpause the processes in the container.
+* docker kill containerid --you need to kill the processes in the container.
+* service docker stop --is used to stop the Docker daemon process.
+* service docker start  -- is used to start the Docker daemon process.
+* docker build -t imagename:tagname dir(.) -- to create image
+* brctl show ---to view the network interfaces under bridge networks only
+* ctrl+p+q -- to come out from container without in stopped state
+* For every container will create a one veth (ifconfig)
+* apt-get install iputils-ping ---to install ping command in container
+* docker start -ai Container2 -- to enter into interact mode directly
+* docker run -ti --rm -v DataVolume3:/var ubuntu --to copy data from ubuntu container to volume 
+* docker run -ti --name=Container6 --volumes-from Container4:ro ubuntu--- read only
+*  docker run --rm --volumes-from containerbackup -v /home/backup:/backup ubuntu tar cvf /backup/backup.tar /backup
+*  docker  save -o image.tar ubuntu ---to save image in tar file
+*  docker load -i image.tar --- to create image from tar file
