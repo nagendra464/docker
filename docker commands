@@ -19,3 +19,12 @@
 *  docker run --rm --volumes-from containerbackup -v /home/backup:/backup ubuntu tar cvf /backup/backup.tar /backup
 *  docker  save -o image.tar ubuntu ---to save image in tar file
 *  docker load -i image.tar --- to create image from tar file
+* docker history imagename --- to see the history of image
+* docker logs container name ---- to see the logs of a container
+* docker top container name  -- to see the pid
+* docker commit containername new image name --- to create the image from existing container
+* docker save imagename -o newimage.tar  --- to create the tar file( not used)
+* docker export containername -o newimage.tar  ---
+* docker import mewimage.tar newimage name ---- to import from tar file 
+  docker run -itd --name test -p 8087:80  web:latest /usr/local/apache2/bin/httpd -D FOREGROUND -- this coomand has to execute after the import
+  
