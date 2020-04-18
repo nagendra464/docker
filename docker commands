@@ -27,4 +27,9 @@
 * docker export containername -o newimage.tar  ---
 * docker import mewimage.tar newimage name ---- to import from tar file 
   docker run -itd --name test -p 8087:80  web:latest /usr/local/apache2/bin/httpd -D FOREGROUND -- this coomand has to execute after the import
-  
+* docker network connect networkname containername  --- to connet the network
+* docker network disconnect networkname containername  --- to disconnet the network
+* docker network create mynet -d bridge  -- to create custom network
+note- for single container we can have multiple network connections
+
+
